@@ -49,4 +49,9 @@ public class Estudante {
     public void setScore(int score) {
         this.score = score;
     }
+
+    @Override
+    public String toString() { // MÉTODO ajudou a sair no console corretamente os testes baseados nas queries.
+        return "Estudante [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", score=" + score + "]";
+    }
 }
