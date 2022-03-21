@@ -16,7 +16,7 @@ public interface EstudanteRepository extends CrudRepository<Estudante, Long> { /
                                                             // List = Para listar todos os estudantes
                                                             // Pageable = implementando o Paging
 
-    @Query("select es.firstName,es.lastName from Estudante es") // es = estudante. É uma aliás. Como se você estivesse utilizando uma native query.
+    @Query("select es.firstName,es.lastName from Estudante es") // es = estudante. Isso é uma aliás.
     List<Object[]> findAllEstudantesPartialData(); // List<Object> array contem cada coluna que nós especificarmos nessa query.
 
     @Query("from Estudante where firstName=:firstName")
@@ -29,16 +29,17 @@ public interface EstudanteRepository extends CrudRepository<Estudante, Long> { /
     @Query("from Estudante where score>:min and score<:max")
     List<Estudante> findEstudantesForGivenScores(@Param("min") int min, @Param("max") int max);
 
-    @Modifying //previne exception
-    @Query("delete from Estudante where firstName = :firstName")
+    @Modifying                                                                          //previne exception
+    @Query("delete from Estudante where firstName = :firstName")                           // não esquecer de usar @Transactional e @Rollback(false) no teste correspondente.
     void deleteEstudantesByFirstName(@Param("firstName") String firstName);
 
-/*
-    @Query(value = "select * from student", nativeQuery = true)
-    List<Estudante> findAllEstudanteNQ();
+    @Query(value = "select * from estudante", nativeQuery = true) // Usando Native Query
+    List<Estudante> findAllEstudanteNQ();                           // Lembrar que assim como JPQL, estudante alí é case sensitive, ou seja, tem que estar igual ao database.
+                                                                    // nativeQuery tem que ser true para não dar erro.
+                                                                    // Não há conversão aqui. Ele está realizando o select diretamente no database.
+                                                                    // NQ = nativeQuery
 
-    @Query(value = "select * from student where fname=:firstName", nativeQuery = true)
-    List<Estudante> findByFirstNQ(@Param("firstName")String firstName);
-*/
-
+    @Query(value = "select * from estudante where fname=:firstName", nativeQuery = true) // Usando Native Query
+    List<Estudante> findByFirstNQ(@Param("firstName")String firstName);                 // Ligamos (bind = ligar) ele ao passarmos o parâmetro firstName e não esquecer de passar o @Param.
+                                                                                        // Igual ao feito na linha 22 com JPQL.
 }

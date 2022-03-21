@@ -83,4 +83,14 @@ class JpqlequerynativeApplicationTests {
 		repository.deleteEstudantesByFirstName("Bill");
 	}
 
+	@Test
+	public void testFindAllEstudanteNQ() {
+		System.out.println(repository.findAllEstudanteNQ()); // teste com native query
+	}
+
+	@Test
+	public void testFindByFirstNameNQ() {
+		System.out.println(repository.findByFirstNQ("Bill"));
+	} // teste com native query
+
 }
