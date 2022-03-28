@@ -62,3 +62,11 @@
 #### - Por sua vez, o TransactionalManager/TransactionCo-ordinator usa o ResourceManager que sabe como usar API's igual ao JDBC, hibernate ORM e etc para executar transações no Resource implícito do Database.
 #### - Resource implícito é só um recurso que é chamado numa transação local.
 #### - E se houver mais de um Resource, no caso, de ter múltiplos Databases correndo em diferentes servidores, então uma transação distribuída deverá ser chamada.
+## Services Layer ( Camada de Serviço )
+### - Eles são os responsáveis, dentro do caso de uso deste projeto, para transferir o dinheiro.
+### - Será criado uma Interface de serviço de conta bancária, ContaBancariaService, que Implementará uma nova Interface que será criada chamada ContaBancariaServiceImpl, e essa usará ContaBancariaRepo para transferir o dinheiro.
+|   Transferência de Dinheiro (caso de uso)  |   :---:     |
+|   :---:     |   :---:     |
+| Interface: ContaBancariaService|  Implementará:     |
+| Interface: ContaBancariaServiceImpl    |   Que usará:    |
+| Interface: ContaBancariaRepo    |   Para transferir o dinheiro.     |
