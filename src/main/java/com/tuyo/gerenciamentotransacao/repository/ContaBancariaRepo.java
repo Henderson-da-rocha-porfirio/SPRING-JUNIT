@@ -1,4 +1,4 @@
-package com.tuyo.gerenciamentotransacao;
+package com.tuyo.gerenciamentotransacao.repository;
 
 import com.tuyo.gerenciamentotransacao.entities.ContaBancaria;
 import org.springframework.data.repository.CrudRepository;
