@@ -1,13 +1,18 @@
 package com.tuyo.gerenciamentotransacao.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "contabanco") // usado quando o nome do Database é diferente do Objeto/Classe
 public class ContaBancaria {
     @Id
     private int accno;
+    @Column(name = "firstname") // usado quando o nome da coluna é diferente do que está no Database
     private String firstName;
+    @Column(name = "lastname")
     private String lastName;
     private int bal;
 

@@ -2,6 +2,5 @@ package com.tuyo.gerenciamentotransacao.services;
 
 public interface ContaBancariaService {
 
-
-    void transfer(int total);
+   public void transfer(int total);
 }
