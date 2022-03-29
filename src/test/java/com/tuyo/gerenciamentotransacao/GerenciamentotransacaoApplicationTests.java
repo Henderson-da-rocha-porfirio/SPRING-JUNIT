@@ -13,7 +13,7 @@ class GerenciamentotransacaoApplicationTests {
 
 	@Test
 	void testTransfer() {
- 		cbService.transfer(1000); // Para transferir os $500 vai checar no database se tem o valor.
+	 		cbService.transfer(1000); // Para transferir os $500 vai checar no database se tem o valor.
 	}
 
 }
