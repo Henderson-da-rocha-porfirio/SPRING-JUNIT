@@ -38,3 +38,5 @@
 #### i. Spring Data MongoDB
 #### ii. Embedded MongoDB Database (util para o teste)
 ### Para ele funcionar sem a incorporação, remover a dependência:de.flapdoodle.embed
+### E configurar application.properties com acessos e inclusive com o nome do database que deseja que seja criado, portas e etc.
+### Caso busque o funcionamento sem a configuração das properties, verificar na Branch a configuração sem as properties configuradas.
