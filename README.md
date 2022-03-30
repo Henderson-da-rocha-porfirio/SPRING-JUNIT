@@ -37,3 +37,4 @@
 ### - Na hora de criar o projeto, colocar as dependências (só digitar mongo que aparecerão as duas opções):
 #### i. Spring Data MongoDB
 #### ii. Embedded MongoDB Database (util para o teste)
+### Para ele funcionar sem a incorporação, remover a dependência:de.flapdoodle.embed
