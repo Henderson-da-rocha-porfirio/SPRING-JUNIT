@@ -16,7 +16,7 @@
 #### 2. Rodar comandos no cmd: mongo e se quiser saber os comandos: db.help
 #### 3. Rodar o Servidor: mongod. Mas não depois de entrar no console do mongo. Se quiser, tem que ser antes.
 #### 4. Mostrar os databases: show dbs
-#### 5. Criar um novo banco: use mydb
+#### 5. Criar um novo banco ou escolher detre os existentes: use mydb
 #### 6. Mostrar Collections: show collections
 #### 7. Criar Tabela com a coluna: db.produto.insert({"name":"mac","price":3000})
 #### 8. Achar a Tabela: db.produto.find(): Resposta: { "_id" : ObjectId("6243aa9c5da52e55d6cacf2a"), "name" : "mac", "price" : 3000 }
