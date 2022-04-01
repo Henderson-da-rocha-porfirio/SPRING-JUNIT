@@ -16,3 +16,12 @@ ALTER SEQUENCE estudante_id_seq RESTART WITH 1;
 UPDATE estudante SET id=nextval('estudante_id_seq');
 
 drop table estudante
+
+
+-- Exemplo de Correcao de erro em postgresql onde não se consegue salvar novos ID's: Erro: duplicate key value violates unique constraint
+
+SELECT * FROM paciente
+
+select setval('paciente_id_seq', (select max(id) from paciente))
+
+SELECT * FROM paciente_id_seq
