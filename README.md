@@ -1,5 +1,11 @@
-# Spring-Data-JPA---JPQL-e-Native-Query
+# Testes Com JUNIT
+### DEPENDÊNCIA
+````
+<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+</dependency>
+````
+# ATENÇÃO: VERIFICAR TODOS OS TESTES FEITOS DE JUNIT COMO REFERÊNCIA NO REPOSITÓRIO SPRING DATA JPA ( VER BRANCHES )
 
-## Correcao de Erro: hibernate_sequence
-### Solucao(rodar no postgres):
-#### CREATE SEQUENCE hibernate_sequence START 1;
