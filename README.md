@@ -1,5 +1,6 @@
 # Testes Com JUNIT
 ### Verificar as branches deste repositório também.
+### Verificar também os repositórios nas branches sobre os SQL.
 ### DEPENDÊNCIA
 ````
 <dependency>
