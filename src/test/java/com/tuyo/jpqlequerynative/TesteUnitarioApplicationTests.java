@@ -16,7 +16,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class JpqlequerynativeApplicationTests {
+class TesteUnitarioApplicationTests {
 
 	@Autowired
 	EstudanteRepository repository;
